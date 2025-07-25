@@ -1,0 +1,29 @@
+
+Title: Monte Carlo Simulation of 2D Brownian Motion and Diffusion Coefficient Estimation
+
+Abstract:
+This project demonstrates a Monte Carlo simulation of 2D Brownian motion to estimate the diffusion coefficient. A Python program generates random trajectories for multiple particles, computes the mean squared displacement (MSD), and estimates the diffusion coefficient using linear regression. The results show good agreement with theoretical predictions.
+
+Introduction:
+Brownian motion describes the random movement of particles suspended in a fluid, resulting from collisions with surrounding molecules. Understanding diffusion is fundamental in physics, chemistry, and biology. The diffusion coefficient is a key parameter that quantifies how quickly particles spread out over time.
+
+Theory:
+In two dimensions, the mean squared displacement (MSD) is related to the diffusion coefficient D by:
+MSD = 4Dt
+where t is time. By simulating random walks and analyzing the MSD, we can estimate D.
+
+Methodology:
+We generate random steps for each particle from a normal distribution with zero mean and variance related to D and time step dt. By accumulating these steps, we obtain 2D trajectories. We simulate 100 particles with 1000 steps each to obtain statistically reliable results.
+
+Results:
+The simulation produces realistic Brownian trajectories. The MSD vs. time plot shows a linear trend as expected. Using linear regression, we estimate the slope and calculate the diffusion coefficient for the system. The estimated value closely matches the true input value of D = 1.0.
+
+Discussion:
+The slight deviation between the estimated and true D arises from statistical fluctuations and finite sample size. Increasing the number of particles or time steps improves accuracy. The simulation successfully demonstrates the link between random walks and macroscopic diffusion.
+
+Conclusion:
+This project illustrates how Monte Carlo methods can be used to study physical processes such as diffusion. The results validate the theoretical MSD relation and provide insight into stochastic processes.
+
+References:
+[1] Einstein, A. (1905). On the movement of small particles suspended in a stationary liquid.
+[2] Berg, H. C. (1993). Random Walks in Biology.
